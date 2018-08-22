@@ -25,12 +25,12 @@ public class Account
         }
     }
 
-    public void AddMoney(decimal money)
+    public virtual void AddMoney(decimal money)
     {
         AccountBalance = AccountBalance + money;
     }
 
-    public string Withdrawl(decimal money)
+    public virtual string Withdrawl(decimal money)
     {
         if (money > AccountBalance)
         {
