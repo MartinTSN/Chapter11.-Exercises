@@ -8,5 +8,11 @@ public class Square : Quadrilateral
 
     }
 
+    public override double Area()
+    {
+        double a = Point1.X - Point2.X;
+        return a * a;
+    }
+
 }
 
