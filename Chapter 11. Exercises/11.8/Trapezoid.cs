@@ -2,8 +2,8 @@
 
 public class Trapezoid :Quadrilateral
 {
-    public Trapezoid(decimal x1, decimal x2, decimal y1, decimal y2)
-        : base(x1, x2, y1, y2)
+    public Trapezoid(Point point1, Point point2, Point point3, Point point4)
+        : base(point1, point2, point3, point4)
     {
 
     }

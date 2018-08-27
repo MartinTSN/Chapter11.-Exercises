@@ -2,67 +2,67 @@
 
 public class Quadrilateral
 {
-    private decimal x1;
-    private decimal x2;
-    private decimal y1;
-    private decimal y2;
+    private Point point1;
+    private Point point2;
+    private Point point3;
+    private Point point4;
 
-    public Quadrilateral(decimal x1, decimal x2, decimal y1, decimal y2)
+    public Quadrilateral(Point point1, Point point2, Point point3, Point point4)
     {
-        X1 = x1;
-        X2 = x2;
-        Y1 = y1;
-        Y2 = y2;
+        Point1 = point1;
+        Point2 = point2;
+        Point3 = point3;
+        Point4 = point4;
     }
-    public decimal X1
+    public Point Point1
     {
         get
         {
-            return x1;
+            return point1;
         }
         set
         {
-            x1 = value;
-        }
-    }
-
-    public decimal X2
-    {
-        get
-        {
-            return x2;
-        }
-        set
-        {
-            x2 = value;
-        }
-    }
-    public decimal Y1
-    {
-        get
-        {
-            return y1;
-        }
-        set
-        {
-            y1 = value;
-        }
-    }
-    public decimal Y2
-    {
-        get
-        {
-            return y2;
-        }
-        set
-        {
-            y2 = value;
+            point1 = value;
         }
     }
 
-    public virtual decimal Area()
+    public Point Point2
     {
-        return (X1 - X2) * (Y1 - Y2);
+        get
+        {
+            return point2;
+        }
+        set
+        {
+            point2 = value;
+        }
+    }
+    public Point Point3
+    {
+        get
+        {
+            return point3;
+        }
+        set
+        {
+            point3 = value;
+        }
+    }
+    public Point Point4
+    {
+        get
+        {
+            return point4;
+        }
+        set
+        {
+            point4 = value;
+        }
+    }
+
+    public virtual double Area()
+    {
+        return (Point1.X - Point2.X) * (Point1.Y - point3.Y);
     }
 }
 

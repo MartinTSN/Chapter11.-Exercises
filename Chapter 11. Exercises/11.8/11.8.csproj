@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Parellelogram.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Quadrilateral.cs" />
     <Compile Include="Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

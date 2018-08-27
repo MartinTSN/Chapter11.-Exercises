@@ -2,28 +2,34 @@
 
 public class Parellelogram : Quadrilateral
 {
-    private decimal h;
-    public Parellelogram(decimal x1, decimal x2, decimal y1, decimal y2)
-        : base(x1, x2, y1, y2)
+    public Parellelogram(Point point1, Point point2, Point point3, Point point4)
+        : base(point1, point2, point3, point4)
     {
 
     }
 
-    public decimal height()
+    public override double Area()
     {
-        /* decimal c = Y1 - X1;
-         decimal d = Y2 - X2;
-         decimal b = X2 - X1;
-         decimal a = Y2 - Y1;
-         decimal toRoot = (-a + b + c + d) * (a - b + c + d) * (a - b + c - d) * (a - b - c + d);
-         decimal toDevide = 2 * (b - a);
-         h = Convert.ToDecimal(Math.Sqrt(Convert.ToDouble(toRoot))) / Convert.ToDecimal(toDevide);
-         return h;*/
+        double b = Point1.X - Point2.X;
+        double a = Point1.Y - Point3.Y;
 
+        Point pointMini = new Point(b / 2, Point3.Y);
 
-        decimal b = X2 - X1;
-        decimal a = Y2 - Y1;
+        double miniB = Point3.X - pointMini.X;
 
+        if (b < 0)
+        {
+            b = Math.Abs(b);
+        }
+        if (a < 0)
+        {
+            a = Math.Abs(a);
+        }
+        if (miniB < 0)
+        {
+            miniB = Math.Abs(miniB);
+        }
+        return b * Math.Sqrt(Math.Abs((a * a) - (miniB * miniB)));
 
     }
 }
