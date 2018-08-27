@@ -10,26 +10,10 @@ public class Parellelogram : Quadrilateral
 
     public override double Area()
     {
-        double b = Point1.X - Point2.X;
-        double a = Point1.Y - Point3.Y;
+        double b = Math.Abs(Point1.X - Point2.X);
+        double a = Math.Abs(Point1.Y - Point3.Y);
 
-        Point pointMini = new Point(b / 2, Point3.Y);
-
-        double miniB = Point3.X - pointMini.X;
-
-        if (b < 0)
-        {
-            b = Math.Abs(b);
-        }
-        if (a < 0)
-        {
-            a = Math.Abs(a);
-        }
-        if (miniB < 0)
-        {
-            miniB = Math.Abs(miniB);
-        }
-        return b * Math.Sqrt(Math.Abs((a * a) - (miniB * miniB)));
+        return Math.Abs(b * (Point1.Y - Point3.Y));
 
     }
 }
